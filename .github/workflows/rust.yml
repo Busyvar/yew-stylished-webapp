@@ -26,10 +26,8 @@ jobs:
       run: trunk build --release
     - name: Run tests
       run: cargo test --verbose
-    - name: Deploy index to Gist
-      uses: exuanbo/actions-deploy-gist@v1.1.4
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        token: ${{secrets.TOKEN.TOKEN}}
-        gist_id: ${{secrets.TOKEN.GIST_ID}}
-        gist_description: a test yew app deployment
-        file_path: dist/index.html 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
