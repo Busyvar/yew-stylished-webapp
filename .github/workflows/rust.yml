@@ -15,9 +15,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Install trunk
+      uses: jetli/trunk-action@v0.1.0
+      with:
+        version: 'latest'
     - uses: actions/checkout@v3
     - name: Build
-      run: cargo build --verbose
+      run: trunk build --verbose --release
     - name: Run tests
       run: cargo test --verbose
     - name: Deploy index to Gist
