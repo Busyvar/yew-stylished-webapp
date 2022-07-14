@@ -1,0 +1,8 @@
+body {
+  background:red;
+}
+html {
+  --mdc-theme-primary: green;
+  --mdc-theme-secondary: blue;
+  --mdc-icon-font: 'Material Icons Outlined';
+}
