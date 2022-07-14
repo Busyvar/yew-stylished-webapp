@@ -29,7 +29,7 @@ jobs:
     - name: Deploy index to Gist
       uses: exuanbo/actions-deploy-gist@v1.1.4
       with:
-        token: ${{secrets.TOKEN}}
-        gist_id: ${{secrets.GIST_ID}}
+        token: ${{secrets.TOKEN.TOKEN}}
+        gist_id: ${{secrets.TOKEN.GIST_ID}}
         gist_description: a test yew app deployment
         file_path: dist/index.html 
