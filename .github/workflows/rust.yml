@@ -21,7 +21,7 @@ jobs:
         version: 'latest'
     - uses: actions/checkout@v3
     - name: Build
-      run: trunk build --verbose --release
+      run: trunk build --release
     - name: Run tests
       run: cargo test --verbose
     - name: Deploy index to Gist
